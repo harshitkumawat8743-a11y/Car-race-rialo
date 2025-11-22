@@ -37,12 +37,12 @@ car-race-rialo/
 
 🚀 Play the Game (Live)
 
-🔗 https://YOUR-USERNAME.github.io/car-race-rialo/
+🔗 https://harshitkumawat8743-a11y.github.io/Car-race-rialo/
 
 (Replace with your actual GitHub Pages link)
 
 ▶️ Run Locally
-git clone https://github.com/YOUR-USERNAME/car-race-rialo.git
+git clone https://github.com/harshitkumawat8743-a11y/Car-race-rialo.git
 cd car-race-rialo
 Then open index.html in browser ✅
 
