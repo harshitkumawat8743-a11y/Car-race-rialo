@@ -1,0 +1,116 @@
+:root{
+  --bg:#0f1114;
+  --panel:#0d0f12;
+  --accent:#E6DCCB; /* light beige like your icon bg */
+  --muted:#9b9b9b;
+  --primary:#00ffd5;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, Arial, sans-serif;
+  background: linear-gradient(180deg,#070709 0%, #0f1114 100%);
+  color:var(--accent);
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+/* Top Bar */
+.topBar{
+  width: min(420px, 95%);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 14px;
+  margin-top:12px;
+  background:rgba(255,255,255,0.03);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brandLogo{
+  width:36px;height:36px;border-radius:9px;background:#efe6d9;padding:4px;object-fit:contain;
+}
+.brandText{font-weight:600;letter-spacing:0.6px;color:#fff}
+.score{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:700;
+  color:#fff;
+}
+.scoreLogo{width:22px;height:22px;object-fit:contain;border-radius:6px;background:#efe6d9;padding:3px}
+
+/* Game wrap */
+.gameWrap{ width:min(420px,95%); display:flex; flex-direction:column; align-items:center; gap:10px; }
+.gameArea{
+  width:100%;
+  max-width:400px;
+  height:640px;
+  background: linear-gradient(#1e1f22,#111213);
+  border-radius:14px;
+  position:relative;
+  overflow:hidden;
+  border:2px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Player car */
+.car{
+  width:58px;height:110px;background:linear-gradient(180deg,#ff5a5a,#d63b3b);
+  position:absolute;border-radius:10px;bottom:18px;left:50%;
+  transform:translateX(-50%);
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.6);
+}
+
+/* Enemy cars */
+.enemy{
+  width:58px;height:110px;background:linear-gradient(180deg,#ffd86b,#ffb84d);
+  position:absolute;border-radius:10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.55);
+}
+
+/* Coins with Rialo logo */
+.coin{
+  width:42px;height:42px;border-radius:50%;
+  position:absolute; background:#efe6d9;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45), inset 0 -6px 8px rgba(0,0,0,0.06);
+  transform-origin:center;
+}
+.coin img{ width:28px; height:28px; object-fit:contain; filter: saturate(0) contrast(1.05); }
+
+/* Start button */
+.startBtn{
+  position:fixed; bottom:22px; left:50%; transform:translateX(-50%);
+  padding:14px 22px;border-radius:14px;border:none;background:linear-gradient(90deg,#efe6d9,#f2eadf);
+  color:#111;font-weight:700;font-size:18px; display:flex;gap:10px;align-items:center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  cursor:pointer;
+}
+.btnLogo{ width:26px; height:26px; object-fit:contain; border-radius:6px; background:#efe6d9; padding:3px; }
+
+/* Controls (mobile) */
+.controls{ width:100%; display:flex; justify-content:space-between; padding:0 20px; margin-top:6px; }
+.controlBtn{
+  width:44px;height:44px;border-radius:10px;border:none;background:rgba(255,255,255,0.04);
+  color:var(--accent); font-size:20px; font-weight:700; cursor:pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+/* small screen adapt */
+@media (max-width:420px){
+  .gameArea{ height:58vh; }
+  .car, .enemy{ width:48px;height:90px; }
+  .coin{ width:36px;height:36px; }
+  .startBtn{ font-size:16px; padding:12px 18px; }
+}
